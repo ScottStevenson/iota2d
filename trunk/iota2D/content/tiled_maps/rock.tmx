@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="100" tileheight="100">
+ <tileset firstgid="1" name="rock" tilewidth="100" tileheight="100" spacing="1" margin="1">
+  <image source="rock.png"/>
+  <tile id="1">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="isHazzard" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Layer 1" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ajWqDMBSGYVuH93/Jo4gQQn40Med8mveBMLpubZoXS7T9LsvyNR7IK63Px/j5QA819NBCDy300DKqx7GX2oJRez7094j/Jt7b9vT4RD9ncNfxkTq/4Pi4rrdH6Twv7nHlfDB+7lmOkZHn23e8Xx1jFso9ZjRyfehxnUcPmuTRQ8voHrl9l1KT31zCvYPn3Eb3KN2n8lnLLD2egh4awuOIHn5S13XoYa+0v6CHnTPXEZR6XL0GEo81uH8tPKbXOLMGSj16/3+Nhtr5Rc3bevTs/RW8qYf1445ADy300EIPLU/pYXEtT5Fqj1nRQws9dirvdfTY0cP/tYfCHsf357zm4YUe6Xl4Ue4Rfs/Ueh5eVHt4Hif02OV6WB8n3j3+KiNUuu+OueTGlri9JW7nfl/at6U+v1FV63Fnl1qPnhHvpeMG4Wt5Q487Ru/1srPjzDxUpXrADz200EMLPbTQQ0tLj549VstjzcTy+JhtbVvQQ4vl+Tk96uihpWWNWnvRo85yjehRN2qN2Lu2GdkD1428vg4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg2f4Bic1R3UCcAAA=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="0" height="0">
+  <object name="health" type="ghost:health" x="1602" y="704" width="100" height="100"/>
+  <object name="shield0" type="object:sheild" x="1996" y="332" width="200" height="200"/>
+  <object name="enemy:alien0" type="enemy:alien" x="2852" y="3557" width="264" height="379"/>
+  <object name="health1" type="ghost:health" x="1794" y="408" width="100" height="100"/>
+  <object name="door1" type="ghost:door" x="3228" y="5141" width="269" height="255"/>
+  <object name="fire" type="emitter:fire" x="1885" y="2251" width="41" height="44"/>
+  <object name="smoke" type="emitter:smoke" x="1883" y="2216" width="35" height="39"/>
+ </objectgroup>
+</map>
