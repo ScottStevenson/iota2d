@@ -56,13 +56,12 @@ public class ShipEntity extends CharacterEntity
 		AffineTransform transform = new AffineTransform();
 		transform.translate( coll.getPos().x - width / 2, coll.getPos().y - height / 2 );
 		transform.rotate( coll.getRotation(), width / 2, height / 2 );
-		if( state == EntityState.STATIC )
+		switch( state )
 		{
-			g.drawImage( staticSprite.getImage(), transform, null );
-		}
-		else if( state == EntityState.THRUST )
-		{
-			g.drawImage( thrustSprite.getImage(), transform, null );
+		case STATIC: g.drawImage( staticSprite.getImage(), transform, null );
+		break;
+		case THRUST: g.drawImage( thrustSprite.getImage(), transform, null );
+		break;
 		}
 	}
 
