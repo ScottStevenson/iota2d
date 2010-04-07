@@ -20,8 +20,11 @@ import java.awt.DisplayMode;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioFormat;
 import javax.swing.ImageIcon;
 
@@ -135,12 +138,17 @@ public class Game
 			
 			//Load sprites
 			redParticle = new Sprite();
-			redParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/redparticle.png").getImage(), 0);
+			//redParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/redparticle.png").getImage(), 1000000);
+			redParticle.addFrame(ImageIO.read( new File( "content/sprites/redparticle.png" )), 100000);
 			greenParticle = new Sprite();
-			greenParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/greenparticle.png").getImage(), 0);
+			//greenParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/greenparticle.png").getImage(), 0);
+			greenParticle.addFrame(ImageIO.read( new File( "content/sprites/greenparticle.png" )), 100000);
 			
 			//Run the game
 			run();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		finally
 		{
@@ -166,9 +174,9 @@ public class Game
 				
 				//Particle trail
 				Particle p = new Particle("p"+pNum, level.getPlayer().coll.getPos(), 1);
-				p.setSpeed(new Vector2((float)1, (float)0));
+				//p.setSpeed(new Vector2((float)1, (float)0));
 				physics.add(p);
-				ParticleEntity pEnt = new ParticleEntity("p"+pNum, greenParticle, p, level.getPlayer().coll.getPos(), 2000);
+				ParticleEntity pEnt = new ParticleEntity("p"+pNum, greenParticle, p, level.getPlayer().coll.getPos(), 1000);
 				level.addEntity(pEnt);
 				pNum += (pNum+1)%2500;//Maximum particle id of 2500
 				
