@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="16" tileheight="16">
+ <tileset name="smwdeey" firstgid="1" tilewidth="16" tileheight="16" spacing="1" margin="1">
+  <image source="DeeYsMario.png"/>
+ </tileset>
+ <layer name="Layer 1" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3XwQ3CMAwFUKewE7AAcAQWoGwBK8MSZILm0jqIvif9m2VH9ikRAAAAAAAAAACwjHfNZ4HajD7/aFMitmX+2ow+AACQ5ThEnCZyHnq/cF3udd/jRB7ukepZ9/1qZC32pX8Ojf/2LmHGr7iW/rk1dnVJmAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAvL4/D8lfQJwAAA==
+  </data>
+ </layer>
+</map>
