@@ -52,8 +52,6 @@ public class Game
 	protected SoundManager soundManager;
 	protected MidiPlayer midiPlayer;
 	
-	protected Sound coinSound;
-	
 	// create a new game
 	public Game()
 	{
@@ -74,7 +72,6 @@ public class Game
 			//Set up sound
 			this.midiPlayer = new MidiPlayer();
 			this.soundManager = new SoundManager( new AudioFormat( 44100.0f, 16, 2, true, false ));
-			coinSound = soundManager.getSound( "content/sound/door2.wav" );
 			
 			entityFactory = new EntityFactory( physics, database );
 			levelFactory = new LevelFactory( database, physics, midiPlayer, entityFactory );

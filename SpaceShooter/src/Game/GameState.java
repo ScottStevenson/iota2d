@@ -50,26 +50,26 @@ public class GameState
 		float torque = 0;
 		Vector2 pos = ship.coll.getPos();
 		
-		game.level.getPlayer().state = EntityState.STATIC;
+		ship.state = EntityState.STATIC;
 		if( up )
 		{
 			thrustY += -.01;
-			game.level.getPlayer().state = EntityState.THRUST;
+			ship.state = EntityState.THRUST;
 		}
 		if( down )
 		{
 			thrustY += .01;
-			game.level.getPlayer().state = EntityState.THRUST;
+			ship.state = EntityState.THRUST;
 		}
 		if( left )
 		{
 			thrustX += -.01;
-			game.level.getPlayer().state = EntityState.THRUST;
+			ship.state = EntityState.THRUST;
 		}
 		if( right )
 		{
 			thrustX += .01;
-			game.level.getPlayer().state = EntityState.THRUST;
+			ship.state = EntityState.THRUST;
 		}
 		if( turnRight )
 		{
@@ -108,11 +108,11 @@ public class GameState
 			fire = false;
 		}
 		
-		if( System.nanoTime() - lastFired > 1000000000 &&  game.level.getEntity( "alienBase" )!=null )
+		if( System.nanoTime() - lastFired > 1000000000 &&  game.level.getEntity( "alienBaseenemy" )!=null )
 		{
-			Vector2 v = pos.sub( game.level.getEntity( "alienBase" ).coll.getPos() );
+			Vector2 v = pos.sub( game.level.getEntity( "alienBaseenemy" ).coll.getPos() );
 			v.normalize();
-			ParticleEntity bullet = ( ParticleEntity )game.entityFactory.buildParticle( "beam" + String.valueOf( numBullets ), "alienBullet", game.level.getEntity( "alienBase" ).coll.getPos() );
+			ParticleEntity bullet = ( ParticleEntity )game.entityFactory.buildParticle( "beam" + String.valueOf( numBullets ), "alienBullet", game.level.getEntity( "alienBaseenemy" ).coll.getPos() );
 			bullet.setVelocity( v );
 			game.level.addEntity( bullet );
 			numBullets++;
@@ -248,17 +248,7 @@ public class GameState
 			{
 				game.level.removeEntity( obj2 );
 			}
-		}
-		
-		if( obj1.contains( "sheild" ) && obj2.contains( "ground" ) || obj2.contains( "sheild" ) && obj1.contains( "ground" ))
-		{
-			if(( System.nanoTime() - lastplayed ) > 100000 )
-			{
-				lastplayed = System.nanoTime();
-				game.soundManager.play( game.coinSound );
-			}
-		}
-		
+		}		
 	}
 	
 	public void keyPressed( int keyCode )

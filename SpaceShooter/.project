@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>Bounce</name>
-			<type>2</type>
-			<location>E:/Documents and Settings/db/Desktop/iota2DTrunk/iota2d/iota2D/src/Bounce</location>
-		</link>
-	</linkedResources>
 </projectDescription>
