@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="128" height="64" tilewidth="48" tileheight="48">
+ <tileset firstgid="1" name="mario" tilewidth="48" tileheight="48" spacing="3" margin="3">
+  <image source="mario48x48.png"/>
+  <tile id="0">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="193">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="285">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="286">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="287">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="288">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="289">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="310">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="311">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="312">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="313">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="314">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="325">
+   <properties>
+    <property name="isPhysical" value=""/>
+   </properties>
+  </tile>
+  <tile id="326">
+   <properties>
+    <property name="isPhysical" value=""/>
+   </properties>
+  </tile>
+  <tile id="335">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="337">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="377">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="378">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="380">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="402">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="403">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="405">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="516">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="517">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="518">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="541">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="542">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="543">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="566">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="567">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="568">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="628">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="629">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="630">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Layer 0" width="128" height="64" x="-1">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YTU7CQBiA4UKiRg9BWyJnAHSvW/+W+HMI2Wg8gm40XkC9iFdwocfxw8wkk2ZKf5xOW+Z9ki/QdmgJLwFCFKErRsMoiodtPwu0hf5ho3/Y6B82+oeN/mGjf9i63H9Q4r7NkSw4LlqEP13uX9e1tL9x2H+xwe+lvvT/WnPsTvrcG/PguP+y4Fy3PX5/9KV/1rfMj7r/LK//izGvjvs/FZzrkf7e7cprvpfzurv+/Kd/97ju/ybr32U+LI/L9s/+HvDRfyGNLivMVcmmbfSfDZqfeYUmU4/XPZDjh5Y1RfuXw+qzJbMts7Ombxv9TwfNz1mF/icer3suxy8sa6ruL0O3Tei/Fv3rnb8uH/1XM5KJZRKZVG2P1W2ibkcNXTdV19bX0s9Dr0mMY6llf2pZr88ZW7Zj43Fjva3a7ud8D6y+HyYt/f7z0f8zKjc+r5u3pur+MqP768l+DpjHsXmm0nVmzJz+MNA/bPQPG/3DRv+w0T9s9PcrVuNqW/+/X3cm9PfKdf/s/zv/GTSP/gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACANv0Ciz2fiQCAAAA=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="128" height="64">
+  <object name="smoke1" type="emitter:smoke" x="1268" y="804" width="12" height="4"/>
+  <object name="smoke2" type="emitter:smoke" x="1491" y="800" width="57" height="13"/>
+  <object name="smoke3" type="emitter:smoke" x="2691" y="819" width="57" height="13"/>
+  <object name="smoke4" type="emitter:smoke" x="2816" y="819" width="57" height="13"/>
+  <object name="smoke5" type="emitter:smoke" x="2899" y="825" width="57" height="13"/>
+  <object name="smoke6" type="emitter:smoke" x="3107" y="825" width="57" height="13"/>
+  <object name="smoke8" type="emitter:smoke" x="3384" y="832" width="57" height="13"/>
+  <object name="smoke8" type="emitter:smoke" x="3487" y="832" width="57" height="13"/>
+  <object name="smoke7" type="emitter:smoke" x="3191" y="833" width="57" height="13"/>
+  <object name="enemy:goomba1" type="enemy:goomba" x="2128" y="592" width="36" height="36"/>
+  <object name="enemy:goomba2" type="enemy:goomba" x="2378" y="598" width="36" height="36"/>
+  <object name="enemy:goomba3" type="enemy:goomba" x="4228" y="1142" width="36" height="36"/>
+  <object name="mushroom1" type="ghost:health" x="3314" y="610" width="44" height="46"/>
+  <object name="enemy:goomba4" type="enemy:goomba" x="3724" y="1160" width="36" height="36"/>
+  <object name="enemy:goomba5" type="enemy:goomba" x="3344" y="1162" width="36" height="36"/>
+  <object name="enemy:goomba6" type="enemy:goomba" x="2948" y="1164" width="36" height="36"/>
+ </objectgroup>
+</map>
