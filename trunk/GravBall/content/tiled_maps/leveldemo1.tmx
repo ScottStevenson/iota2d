@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="50" height="80" tilewidth="100" tileheight="100">
+ <tileset name="rock" firstgid="1" tilewidth="100" tileheight="100" spacing="1" margin="1">
+  <image source="rock.png"/>
+  <tile id="0">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="isHazzard" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Layer 0" width="50" height="80">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3T0QqCQBAF0ImIiqSoiPD/f7QWhJZQaNVgHs6B++KOMLOjm4jYzsgucjnNfO+yahfLzZ3jGrl2c26o3b9zHHnerdTLEi1zdBP12eco93+o0k/UZ5+j/AO3r9yHszLjc0j/zwZ/1PJd1TLsoPaIz722JMMOAAAAAAAAAAAAAAAAAIBxL2cmgM2APgAA
+  </data>
+ </layer>
+ <objectgroup name="objects" width="0" height="0">
+  <object name="player" type="player:player" x="200" y="200" width="100" height="100"/>
+  <object name="red2" type="object:sheild" x="920" y="212" width="100" height="100"/>
+  <object name="door" type="ghost:door" x="1452" y="356" width="200" height="200"/>
+ </objectgroup>
+</map>
