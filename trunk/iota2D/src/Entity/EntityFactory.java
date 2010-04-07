@@ -52,8 +52,7 @@ public class EntityFactory
 		coll.add( new Vector2( pos.x - width / 2, pos.y + height / 2 ));
 		physics.add( coll );
 		
-		AlienAI ai = new AlienAI( coll ); 
-		return new Enemy( name, coll, sprite, height, width, HP, ai );
+		return new Enemy( name, coll, sprite, height, width, HP, null );
 	}
 	
 	public GameEntity buidGameEntity( String name, String type, Vector2 pos )
