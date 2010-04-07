@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="100" tileheight="100">
+ <tileset firstgid="1" name="rock" tilewidth="100" tileheight="100" spacing="1" margin="1">
+  <image source="rock.png"/>
+  <tile id="1">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="isHazzard" value="true"/>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="isHazzard" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Layer 1" width="100" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3bwQrCMBRE0SD0/39ZXBSkiNg6ad5N7oEuLTN5lKokj9baA3CtgtCVkDGF0JWQMYXQlZAxhdCVkDGF0JWQMYXQlZAxhdC1asatwz2rdn1XOWN6JpW77ipm3JrPxwoIXQkZUwhdCRlTCF0JGVMIXQkZd/++4wldCRl3zqOGrWW+AxO6jsp4Zm2dR19n19V51LF9uK6q3vWlekbncb9va3ycg/Po4+z7/MrnjpxHRuLZeCF0JWRMIXQlZEwhdCVkTCF0JWRMIXQlZEwhdCVkTCF0JWRMIXQlZEwhdCVkTBl9zsbzOJLu1mPvpCRpPr4v6lhhFpSOlJyz63UeSNek9t8pz7nUk9rfUhm1GzX37FJ79KqYocM7Wh9a3tWsNJ+VulJUm0m1PCNUWoNKWUa5+ru/x9r5H8R/vq2d6zpW6ryYJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSpN89AeCDzqpAnAAA
+  </data>
+ </layer>
+ <objectgroup name="objects" width="0" height="0">
+  <object name="fire" type="emitter:fire" x="825" y="635" width="41" height="44"/>
+  <object name="smoke" type="emitter:smoke" x="799" y="508" width="35" height="39"/>
+  <object name="explosion" type="emitter:explosion" x="1168" y="368" width="71" height="55"/>
+  <object name="explosion2" type="emitter:explosion" x="1156" y="388" width="71" height="55"/>
+  <object name="explosion3" type="emitter:explosion" x="1180" y="384" width="71" height="55"/>
+  <object name="alienShip1" type="enemy:alienShip" x="2270" y="420" width="166" height="142"/>
+  <object name="alienShip2" type="enemy:alienShip" x="756" y="1188" width="156" height="152"/>
+  <object name="alienShip5" type="enemy:alienShip" x="1800" y="1784" width="156" height="152"/>
+  <object name="alienShip4" type="enemy:alienShip" x="3592" y="1328" width="156" height="152"/>
+  <object name="alienShip9" type="enemy:alienShip" x="3370" y="2676" width="166" height="142"/>
+  <object name="alienShip8" type="enemy:alienShip" x="2698" y="1460" width="166" height="142"/>
+  <object name="alienShip7" type="enemy:alienShip" x="3134" y="432" width="166" height="142"/>
+  <object name="alienShip6" type="enemy:alienShip" x="2762" y="712" width="166" height="142"/>
+  <object name="alienShip10" type="enemy:alienShip" x="1674" y="1212" width="166" height="142"/>
+  <object name="alienShip11" type="enemy:alienShip" x="2090" y="1360" width="166" height="142"/>
+  <object name="alienShip12" type="enemy:alienShip" x="960" y="1796" width="156" height="152"/>
+  <object name="alienShip11" type="enemy:alienShip" x="1432" y="1544" width="156" height="152"/>
+  <object name="alienShip20" type="enemy:alienShip" x="3170" y="1484" width="166" height="142"/>
+  <object name="alienShip21" type="enemy:alienShip" x="438" y="2656" width="166" height="142"/>
+  <object name="alienShip22" type="enemy:alienShip" x="974" y="784" width="166" height="142"/>
+  <object name="asteroid0" type="object:asteroid" x="1658" y="696" width="166" height="142"/>
+  <object name="asteroid1" type="object:asteroid" x="1130" y="1348" width="166" height="142"/>
+  <object name="asteroid2" type="object:asteroid" x="1882" y="2448" width="166" height="142"/>
+  <object name="asteroid3" type="object:asteroid" x="2874" y="2124" width="166" height="142"/>
+  <object name="asteroid4" type="object:asteroid" x="838" y="2296" width="166" height="142"/>
+  <object name="asteroid5" type="object:asteroid" x="3310" y="904" width="166" height="142"/>
+  <object name="asteroid19" type="object:asteroid2" x="2470" y="2724" width="166" height="142"/>
+  <object name="asteroid20" type="object:asteroid2" x="2302" y="1736" width="166" height="142"/>
+  <object name="alienShip30" type="enemy:alienShip" x="282" y="940" width="166" height="142"/>
+  <object name="asteroid22" type="object:asteroid2" x="2462" y="1060" width="166" height="142"/>
+  <object name="asteroid23" type="object:asteroid2" x="622" y="1588" width="166" height="142"/>
+  <object name="alienShip30" type="enemy:alienShip" x="3538" y="2088" width="166" height="142"/>
+  <object name="alienBase" type="enemy:alienBase" x="1402" y="2896" width="166" height="142"/>
+ </objectgroup>
+</map>

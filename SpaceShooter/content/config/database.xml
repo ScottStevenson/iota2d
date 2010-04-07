@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="main">
+	<object name="config">
+		<!-- Mapmodes: tiled or simple -->
+		<property name="mapmode" type="string">tiled</property>
+		<property name="music_on" type="bool">true</property>
+		<property name="draw_background" type="bool">true</property>
+		<property name="first_level" type="string">space</property>
+		<object name="screen">
+			<property name="width">1920</property>
+			<property name="height">1080</property>
+			<property name="colorDepth">16</property>
+		</object>
+	</object>
+	<object name="levels">
+		<object name="space">
+			<property name="player" type="String">ship</property>
+			<property name="gravityX" type="float">0</property>
+			<property name="gravityY" type="float">0</property>
+			<object name="map">
+				<property name="hasMap">true</property>
+				<property name="tmxFile">content/tiled_maps/space.tmx</property>
+			</object>			
+			<property name="midiFile">Tom Sawyer.mid</property>
+			<object name="backgrounds">
+				<property name="numOfBackgrounds">1</property>	
+				<property name="background0">space</property>
+				<property name="background0">moon</property>
+			</object>
+			<object name="foregrounds">
+				<property name="numOfForegrounds">0</property>	
+			</object>
+			<object name="HUD">
+				<property name="hasHUD">true</property>
+				<property name="name">hud</property>
+			</object>
+		</object>
+	</object>	
+	<object name="layers">
+		<object name="image">
+			<object name="moon">
+				<property name="xoffset">1000</property>
+				<property name="yoffset">100</property>
+				<property name="numOfImages">1</property>
+				<property name="image0">moon.png</property>
+			</object>
+			<object name="space">
+				<property name="xoffset">0</property>
+				<property name="yoffset">0</property>
+				<property name="numOfImages">1</property>
+				<property name="image0">space.png</property>
+			</object>
+		</object>
+		<object name="HUD">
+		</object>
+	</object>
+	<object name="entities">
+		<object name="ship">
+			<property name="name">ship</property>
+			<property name="xPos">400</property>
+			<property name="yPos">400</property>
+			<property name="height">127</property>
+			<property name="width">150</property>
+			<property name="HP">300</property>
+			<property name="weight">20</property>
+			<object name="staticSprite">
+				<property name="numOfFrames">1</property>
+				<property name="length0">100</property>
+				<property name="image0">ship.png</property>
+			</object>
+			<object name="thrustSprite">
+				<property name="numOfFrames">1</property>
+				<property name="length0">100</property>
+				<property name="image0">shipThrust.png</property>
+			</object>
+		</object>
+	    <object name="gameObjects">
+			<object name="health">
+				<property name="height">100</property>
+				<property name="width">100</property>
+				<property name="mass">10</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">health.png</property>
+				</object>
+			</object>
+			<object name="asteroid">
+				<property name="height">512</property>
+				<property name="width">512</property>
+				<property name="mass">100000</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">asteroid.png</property>
+				</object>
+			</object>
+			<object name="asteroid2">
+				<property name="height">128</property>
+				<property name="width">128</property>
+				<property name="mass">1000</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">asteroid2.png</property>
+				</object>
+			</object>
+		</object>
+		<object name="enemies">
+			<object name="alienShip">
+				<property name="height">128</property>
+				<property name="width">128</property>
+				<property name="HP">100</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">200</property>
+					<property name="image0">enemyShip.png</property>
+				</object>
+			</object>
+			<object name="alienBase">
+				<property name="height">512</property>
+				<property name="width">512</property>
+				<property name="HP">1000</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">200</property>
+					<property name="image0">base.png</property>
+				</object>
+			</object>
+		</object>
+		<object name="particleEmitters">
+			<object name="fire">
+			    <property name="life">10000000</property>
+				<property name="randomAmount">.04</property>
+				<property name="vX">0</property>
+				<property name="vY">-.1</property>
+				<property name="spawnRate">15</property>
+				<property name="particleType">fire</property>
+			</object>
+			<object name="smoke">
+				<property name="life">10000000</property>
+				<property name="randomAmount">.03</property>
+				<property name="vX">0</property>
+				<property name="vY">-.05</property>
+				<property name="spawnRate">100</property>
+				<property name="particleType">smoke</property>
+			</object>		
+			<object name="explosion">
+				<property name="life">3000</property>
+				<property name="randomAmount">.5</property>
+				<property name="vX">0</property>
+				<property name="vY">0</property>
+				<property name="spawnRate">5</property>
+				<property name="particleType">fire</property>
+			</object>
+		</object>
+		<object name="particles">
+			<object name="bullet">
+				<property name="life">4000</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">shot.png</property>
+				</object>
+			</object>
+			<object name="alienBullet">
+				<property name="life">4000</property>
+				<object name="sprite">
+					<property name="numOfFrames">2</property>
+					<property name="length0">300</property>
+					<property name="image0">beam1.png</property>
+					<property name="length1">300</property>
+					<property name="image1">beam2.png</property>
+				</object>
+			</object>
+			<object name="fire">
+				<property name="life">400</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">fire.png</property>
+				</object>
+			</object>
+			<object name="smoke">
+				<property name="life">1500</property>
+				<object name="sprite">
+					<property name="numOfFrames">1</property>
+					<property name="length0">100</property>
+					<property name="image0">smoke.png</property>
+				</object>
+			</object>
+		</object>
+	</object>	
+</database>
