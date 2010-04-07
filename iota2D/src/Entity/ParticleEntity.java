@@ -12,7 +12,7 @@ import Util.Vector2;
 public class ParticleEntity extends Entity
 {
 	private float life;
-	private float timeCreated;
+	private long timeCreated;
 	private Sprite sprite;
 	private Vector2 pos;
 	
@@ -24,7 +24,7 @@ public class ParticleEntity extends Entity
 	
 	ConvolveOp cop = new ConvolveOp( new Kernel( 3, 3, BLUR3x3 ), ConvolveOp.EDGE_NO_OP, null );
 	
-	public ParticleEntity( String name, Sprite sprite, Particle coll, Vector2 pos, float life )
+	public ParticleEntity( String name, Sprite sprite, Particle coll, Vector2 pos, long life )
 	{	
 		super( name, coll );
 		this.life = life;

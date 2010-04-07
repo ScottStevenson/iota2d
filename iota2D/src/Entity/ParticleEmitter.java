@@ -31,7 +31,7 @@ public class ParticleEmitter extends Entity
 	private Random rand;
 	
 	private Sprite sprite;
-	private float partLife;
+	private long partLife;
 		
 	private LinkedList<String> removeParticles;
 	
@@ -53,7 +53,7 @@ public class ParticleEmitter extends Entity
 	 * @param v the velocity of the particles
 	 * @param spawnRate how fast the particles are created
 	 */
-	public ParticleEmitter( String name, PhysicsObject coll, Sprite sprite, float life,
+	public ParticleEmitter( String name, PhysicsObject coll, Sprite sprite, long life,
 			                String type, World physics, Database database, float randomAmount, 
 			                Vector2 v, float spawnRate )
 	{
@@ -73,7 +73,7 @@ public class ParticleEmitter extends Entity
 		this.particleType = database.get( "entities.particleEmitters." + type, "particleType" );
 		this.removeParticles = new LinkedList<String>();
 		this.sprite = sprite;
-		this.partLife = Float.parseFloat( database.get( "entities.particles." + particleType, "life" ));
+		this.partLife = Long.parseLong( database.get( "entities.particles." + particleType, "life" ));
 	}
 	
 	private void add()
