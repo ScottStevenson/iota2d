@@ -71,7 +71,9 @@ public class LevelFactory
 			level.addForeground( buildImageLayer( database.get( "levels." + levelID + ".foregrounds", "foreground" + i )));
 		}
 		
-		level.playMusic( database.get( "levels."+ levelID, "midiFile" ));
+		String midiFile = database.get( "levels."+ levelID, "midiFile" );
+		if ( !midiFile.equals(""))
+			level.playMusic( midiFile );
 		
 		return level;
 	}
