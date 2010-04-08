@@ -38,6 +38,8 @@ public class Level implements Layer
 	
 	private TiledMap tiledMap = null;
 	
+	public Color backgroundColor = new Color(0,0,0);
+	
 	private Font font = new Font( "Ariel", Font.BOLD, 30 );
 	
     public Level( CharacterEntity player2, World physics, MidiPlayer midiPlayer, String levelId )
@@ -47,7 +49,7 @@ public class Level implements Layer
 		this.physics = physics;
 
 		this.entities = new HashMap<String, Entity>();
-		this.player = player2;	
+		this.setPlayer(player2);	
 				
 		this.midiPlayer = midiPlayer;
 		
@@ -106,8 +108,8 @@ public class Level implements Layer
 	public void run( float elapsedTime, Graphics2D g, int width, int height )
 	{			
 		//Upper left pixel of area to draw
-		int xPos =  (int)player.coll.getPos().x-width/2;
-		int yPos = (int)player.coll.getPos().y-height/2;
+		int xPos =  (int)getPlayer().coll.getPos().x-width/2;
+		int yPos = (int)getPlayer().coll.getPos().y-height/2;
 		if (xPos<0)
 			xPos=0;
 		if (yPos<0)
@@ -123,7 +125,7 @@ public class Level implements Layer
 	// @param elapsedTime the time elapsed since the last update
 	public void update( float elapsedTime )
 	{	
-		player.update( elapsedTime );
+		getPlayer().update( elapsedTime );
 		Iterator<String> entityIter = entities.keySet().iterator();
 		while( entityIter.hasNext() )
 		{
@@ -182,7 +184,7 @@ public class Level implements Layer
 		}
 		else
 		{
-			g.setBackground( Color.darkGray );
+			g.setBackground( backgroundColor );
 			g.clearRect(0, 0, 1920, 1080);
 		}
 
@@ -192,7 +194,7 @@ public class Level implements Layer
 		
 		
 		
-		trans.translate( -player.coll.getPos().x + cameraPos.x, -player.coll.getPos().y + cameraPos.y );
+		trans.translate( -getPlayer().coll.getPos().x + cameraPos.x, -getPlayer().coll.getPos().y + cameraPos.y );
 		
 		g.setTransform( trans );
 
@@ -209,7 +211,7 @@ public class Level implements Layer
 			entities.get( entityIter.next() ).draw( g );
 		}
 		
-		player.draw( g );
+		getPlayer().draw( g );
 		
 		g.setTransform( transOld );
 		for( int i = 0; i < foreground.size(); i++ )
@@ -242,7 +244,7 @@ public class Level implements Layer
 		}
 		else
 		{
-			g.setBackground(Color.darkGray);
+			g.setBackground( backgroundColor );
 			g.clearRect(0, 0, 1920, 1080);
 		}
 
@@ -254,7 +256,7 @@ public class Level implements Layer
 		AffineTransform trans = g.getTransform();
 		AffineTransform transOld = new AffineTransform( trans );
 		
-		trans.translate( -player.coll.getPos().x + cameraPos.x, -player.coll.getPos().y + cameraPos.y );
+		trans.translate( -getPlayer().coll.getPos().x + cameraPos.x, -getPlayer().coll.getPos().y + cameraPos.y );
 		
 		g.setTransform( trans );
 
@@ -271,7 +273,7 @@ public class Level implements Layer
 			entities.get( entityIter.next() ).draw( g );
 		}
 		
-		player.draw( g );
+		getPlayer().draw( g );
 		
 		g.setTransform( transOld );
 		for( int i = 0; i < foreground.size(); i++ )
@@ -293,5 +295,9 @@ public class Level implements Layer
 	public Entity getEntity( String name )
 	{
 		return entities.get( name );
+	}
+
+	public void setPlayer(CharacterEntity player) {
+		this.player = player;
 	}
 }

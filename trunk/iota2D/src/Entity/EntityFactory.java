@@ -64,12 +64,14 @@ public class EntityFactory
         int numOfFrames = Integer.parseInt( database.get( "entities.gameObjects." + type + ".sprite", "numOfFrames" ));
 		for( int i = 0; i < numOfFrames; i++ )
 		{
+			System.out.print(name + "\n");
 			String file = "content/sprites/" + database.get( "entities.gameObjects." + type + ".sprite", "image" + i );
 			long length = Long.parseLong( database.get( "entities.gameObjects." + type + ".sprite", "length" + i ));
 			sprite.addFrame( getBufferedImage( file ), length );
+			System.out.print(name + "\n");
 		}
 		
-		RigidBody coll = new RigidBody( name, pos, 1 );
+		RigidBody coll = new RigidBody( name, pos, mass );
 		for( int i = 0; i <= 7; i++ )
 		{
 			float x = ( float )( Math.cos( 2 * Math.PI * i / 8 ) * width / 2 ) + pos.x;
@@ -79,6 +81,7 @@ public class EntityFactory
 		coll.setIsRoteted( true );
 		physics.add( coll );
 		 
+		
 		return new GameEntity( name, coll, sprite, height, width );
 	}	
 	
@@ -123,6 +126,14 @@ public class EntityFactory
 	{
 		int xPos = Integer.parseInt( database.get( "entities.player", "xPos" ));
 		int yPos = Integer.parseInt( database.get( "entities.player", "yPos" ));
+		
+		return buildPlayer(name, xPos, yPos );
+	}
+	
+	public PlayerEntity buildPlayer( String name, int xPos, int yPos ) throws FileNotFoundException
+	{
+//		int xPos = Integer.parseInt( database.get( "entities.player", "xPos" ));
+//		int yPos = Integer.parseInt( database.get( "entities.player", "yPos" ));
 		int height = Integer.parseInt( database.get( "entities.player", "height" ));
 		int width = Integer.parseInt( database.get( "entities.player", "width" ));
 		int HP = Integer.parseInt( database.get( "entities.player", "HP" ));
