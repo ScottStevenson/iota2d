@@ -33,6 +33,7 @@ public class LevelFactory
 	
 	public Level buildLevel( String levelID, CharacterEntity player )
 	{	
+		this.player = player;
 		
 		//Set level map type
 		if( Boolean.parseBoolean( database.get( "levels." + levelID + ".map", "hasMap" )))
@@ -68,24 +69,26 @@ public class LevelFactory
 			    			this.player = player;
 			    		}
 			    	}
-				}else{
-					
-					this.player = player;
-					
 				}
 				
+				
 				level = new Level( this.player, physics, midiPlayer, levelID );
-			
+				
 				//Set whether background should be drawn
 				level.mDrawBackground = Boolean.parseBoolean( database.get("config", "draw_background" ));
 				String colString = database.get("config", "background_color");
-				if ( "".equals(colString)) {
+				if ( !"".equals(colString)) {
 					String[] rgb = (database.get("config", "background_color").split(","));
 					level.backgroundColor = new Color(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2]));
 				}
 				level.addTiledMap(tiledMap);
 				buildPhysicalLayer(tiledMap);
 				buildEntityLayer(tiledMap);
+//				else{
+//					
+//					this.player = player;
+//					
+//				}
 			}
 			catch(Exception ex)
 			{
