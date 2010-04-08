@@ -1,4 +1,4 @@
-package Util;
+package Graphics;
 
 import java.awt.GraphicsEnvironment;
 import java.awt.Image;
