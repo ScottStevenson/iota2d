@@ -2,7 +2,7 @@
 <!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
 <map version="1.0" orientation="orthogonal" width="50" height="80" tilewidth="100" tileheight="100">
  <tileset name="rock" firstgid="1" tilewidth="100" tileheight="100" spacing="1" margin="1">
-  <image source="../../../GravBall3/content/tiled_maps/rock.png"/>
+  <image source="rock.png"/>
   <tile id="0">
    <properties>
     <property name="isPhysical" value="true"/>
