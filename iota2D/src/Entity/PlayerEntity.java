@@ -59,7 +59,8 @@ public class PlayerEntity extends CharacterEntity
 	public void jump()
 	{
 		state = EntityState.JUMPING;
-		coll.setSpeed( new Vector2( 0, -1 ));
+		coll.setSpeed( new Vector2( 0, -3 ));
+		System.out.println("jump");
 	}
 	
 	public void hit( int dam )

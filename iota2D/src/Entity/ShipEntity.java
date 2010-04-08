@@ -68,6 +68,12 @@ public class ShipEntity extends CharacterEntity
 	@Override
 	public void update( float elapsedTime )
 	{
-		this.staticSprite.update( elapsedTime );
+		switch( state )
+		{
+		case STATIC: staticSprite.update( elapsedTime );
+		break;
+		case THRUST: thrustSprite.update( elapsedTime );
+		break;
+		}
 	}
 }
