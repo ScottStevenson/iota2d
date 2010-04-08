@@ -5,6 +5,7 @@
 		<property name="mapmode" type="string">tiled</property>
 		<property name="music_on" type="bool">true</property>
 		<property name="draw_background" type="bool">false</property>
+		<property name="background_color">0,0,0</property>
 		<property name="first_level" type="string">leveldemo1</property>
 		<property name="gravityX" type="float">0</property>
 		<property name="gravityY" type="float">.004</property>
@@ -171,6 +172,7 @@
 			<object name="sheild">
 				<property name="height">145</property>
 				<property name="width">145</property>
+				<property name="mass">1</property>
 				<object name="sprite">
 					<property name="numOfFrames">1</property>
 					<property name="length0">100</property>
@@ -180,6 +182,7 @@
 			<object name="greenspike">
 				<property name="height">145</property>
 				<property name="width">145</property>
+				<property name="mass">1</property>
 				<object name="sprite">
 					<property name="numOfFrames">1</property>
 					<property name="length0">100</property>
