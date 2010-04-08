@@ -287,11 +287,20 @@ public class Level implements Layer
 		}
 	}
 	
+	/**
+	 * 
+	 * @return the player
+	 */
 	public CharacterEntity getPlayer()
 	{
 		return this.player;
 	}
 	
+	/**
+	 * 
+	 * @param name the name of the entity to return
+	 * @return returns the desired entity
+	 */
 	public Entity getEntity( String name )
 	{
 		return entities.get( name );

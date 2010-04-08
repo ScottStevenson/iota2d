@@ -3,6 +3,11 @@ package Graphics;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+/**
+ * 
+ * This class holds a series of frames of images that can be updated and retrieved
+ *
+ */
 public class Sprite 
 {
 	private ArrayList<Frame> frames;
@@ -16,17 +21,16 @@ public class Sprite
 		totalDuration = 0;
 	}
 	
+	/**\
+	 * adds a frame to the sprite
+	 * @param image the image to be used in the sprite.
+	 * @param duration the length to play the frame
+	 */
 	public synchronized void addFrame( BufferedImage image, long duration )
     {
         totalDuration += duration;
         frames.add( new Frame( image, totalDuration ));
     }
-	
-	public synchronized void start()
-	{
-		animTime = 0;
-		currFrameIndex = 0;
-	}
 	
 	public void update( float elapsedTime )
 	{
@@ -74,6 +78,11 @@ public class Sprite
 		return frames.get( i );
 	}
 	
+	/** 
+	 * 
+	 * a container for holding an image and playLenth.
+	 *
+	 */
 	private class Frame
 	{
 		BufferedImage image;
