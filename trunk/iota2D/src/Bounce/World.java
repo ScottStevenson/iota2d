@@ -47,7 +47,7 @@ public class World
 		
 		float time = 0;
 		float targetTime = elapsedTime;
-		while( time < elapsedTime && ( targetTime - time ) > .001 )
+		while( time < elapsedTime && ( targetTime - time ) > .0001 )
 		{	
 			integrate( targetTime - time );
 			
