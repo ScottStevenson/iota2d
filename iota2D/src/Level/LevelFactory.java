@@ -1,5 +1,6 @@
 package Level;
 
+import java.awt.Color;
 import java.io.FileNotFoundException;
 
 import javax.swing.ImageIcon;
@@ -32,12 +33,6 @@ public class LevelFactory
 	
 	public Level buildLevel( String levelID, CharacterEntity player )
 	{	
-		this.player = player;
-		
-		level = new Level( this.player, physics, midiPlayer, levelID );
-	
-		//Set whether background should be drawn
-		level.mDrawBackground = Boolean.parseBoolean( database.get("config", "draw_background" ));
 		
 		//Set level map type
 		if( Boolean.parseBoolean( database.get( "levels." + levelID + ".map", "hasMap" )))
@@ -46,6 +41,48 @@ public class LevelFactory
 			try
 			{
 				TiledMap tiledMap = new TiledMap( database.get( "levels."+ levelID + ".map", "tmxFile" ));
+				
+				//TODO: This is stupid, integrate it with entity loading sometime
+				if ( player == null ) {
+					int numObjects = tiledMap.getObjectCount(0);
+			    	for(int i=0; i<numObjects; i++){
+			    		
+			    		String name = tiledMap.getObjectName( 0, i );
+						String[] type = tiledMap.getObjectType( 0, i ).split(":");
+						Vector2 pos = new Vector2(tiledMap.getObjectX( 0, i ), tiledMap.getObjectY(0, i));
+						System.out.println( type[0] + " " + type[1] + " " + name + " " + pos );
+			    		
+			    		//Player
+			    		if( type[0].equals( "player" ))
+			    		{  
+			    			try 
+			    			{
+			    				player = factory.buildPlayer( "ball", (int)pos.x, (int)pos.y );
+			    			}
+			    			catch (FileNotFoundException e) 
+			    			{
+			    				// TODO Auto-generated catch block
+			    				e.printStackTrace();
+			    			}
+			    			
+			    			this.player = player;
+			    		}
+			    	}
+				}else{
+					
+					this.player = player;
+					
+				}
+				
+				level = new Level( this.player, physics, midiPlayer, levelID );
+			
+				//Set whether background should be drawn
+				level.mDrawBackground = Boolean.parseBoolean( database.get("config", "draw_background" ));
+				String colString = database.get("config", "background_color");
+				if ( "".equals(colString)) {
+					String[] rgb = (database.get("config", "background_color").split(","));
+					level.backgroundColor = new Color(Integer.parseInt(rgb[0]), Integer.parseInt(rgb[1]), Integer.parseInt(rgb[2]));
+				}
 				level.addTiledMap(tiledMap);
 				buildPhysicalLayer(tiledMap);
 				buildEntityLayer(tiledMap);
@@ -142,12 +179,7 @@ public class LevelFactory
     		{
     			level.addEntity( factory.buildEmitter( name, type[1], pos ));
     		}
-    		
-    		//Player
-    		else if( type[0].equals( "player" ))
-    		{  
-    			player.coll.setPos(new Vector2((int)pos.x, (int)pos.y));
-    		}
+ 
     	}
 	}
 
