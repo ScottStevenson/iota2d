@@ -447,8 +447,14 @@ public class World
 					
 					collBody1.v = collBody1.v.add( collisionNormal.mul( impulse / collBody1.mass )); 
 					collBody2.v = collBody2.v.add( collisionNormal.mul( -impulse / collBody2.mass ));
-					collBody1.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep1 ) / collBody1.inertia;
-					collBody2.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep2 ) / collBody2.inertia;
+					if( collBody1.isRotated )
+					{
+						collBody1.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep1 ) / collBody1.inertia;
+					}
+					if( collBody2.isRotated )
+					{
+						collBody2.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep2 ) / collBody2.inertia;
+					}
 				}
 			}
 		}
