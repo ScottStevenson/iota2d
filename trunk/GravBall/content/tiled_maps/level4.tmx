@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="80" tilewidth="100" tileheight="100">
+ <tileset firstgid="1" name="rock" tilewidth="100" tileheight="100" spacing="1" margin="1">
+  <image source="rock.png"/>
+  <tile id="0">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="isHazzard" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="isPhysical" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Layer 0" width="50" height="80">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XcQuCMBCH4ZOIjCKoiPD7f1G3P4Rp5zZz4k3eBw4MM/zlndNGRE4L6yz23P445l78LNY7So6Pq69S18gxFnPMeUT2+RyNq1eiLMxRKkdsf/i9vWn9NvTa09U74zcs5NBo1+Ai41kKP1vNMb1GratOxvnCnrOaY47P18pvLis5cu5JWg2zYyVHzj0ppqYcfq61ddRXt92pLVLLGpFytBzhmjDdttI7MUOOcP2eblt4hko5Wl/F1JbDz0KrVE3z4flZsPqOkZLTV3P5SlWJ/2ntc0kJJeaPHOWUyBG+V+xVNdwPAQAAAAAAAAAAAAAAAAAAsL0etDMdKIA+AAA=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="0" height="0">
+  <object name="green1" type="object:greenspike" x="1296" y="2304" width="100" height="100"/>
+  <object name="red0" type="object:sheild" x="2332" y="2348" width="100" height="100"/>
+  <object name="red1" type="object:sheild" x="1112" y="1256" width="100" height="100"/>
+  <object name="door" type="ghost:door" x="3839" y="2347" width="100" height="100"/>
+  <object name="red2" type="object:sheild" x="3428" y="2348" width="100" height="100"/>
+  <object name="player" type="player:player" x="200" y="200" width="100" height="100"/>
+  <object name="red4" type="object:shield" x="992" y="396" width="100" height="100"/>
+ </objectgroup>
+</map>
