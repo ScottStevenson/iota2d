@@ -422,7 +422,10 @@ public class World
 				float jDen = collisionNormal.dotProduct( collisionNormal ) * ( 1 / collBody2.mass ) + prep2 * prep2;
 				float impulse = jNum / jDen;
 				collBody2.v = collBody2.v.add( collisionNormal.mul( impulse / collBody2.mass )); 
-				collBody2.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep2 ) / collBody2.inertia;
+				if( collBody2.isRotated )
+				{
+					collBody2.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep2 ) / collBody2.inertia;
+				}
 			}
 			else
 			{
@@ -433,7 +436,10 @@ public class World
 					float jDen = collisionNormal.dotProduct( collisionNormal ) * ( 1 / collBody1.mass ) + prep1 * prep1;
 					float impulse = jNum / jDen;
 					collBody1.v = collBody1.v.add( collisionNormal.mul( impulse / collBody1.mass ));
-					collBody1.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep1 ) / collBody1.inertia;
+					if( collBody1.isRotated )
+					{
+						collBody1.angVel += collisionNormal.mul( impulse ).dotProduct( cm2CornerPrep1 ) / collBody1.inertia;
+					}
 				}
 				else
 				{
