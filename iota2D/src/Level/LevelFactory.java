@@ -10,7 +10,6 @@ import Bounce.RigidBody;
 import Data.Database;
 import Entity.CharacterEntity;
 import Entity.EntityFactory;
-import Entity.PlayerEntity;
 import Sound.MidiPlayer;
 import Util.Vector2;
 
