@@ -93,6 +93,7 @@ public class GameState
 			if( Math.abs( normal.y ) > .8 )
 			{
 				onGround = true;
+				player.coll.setSpeed( new Vector2( player.coll.getSpeed().x, 0 ));
 			}
 			
 			if( obj1.contains( "Hazzard" ) || obj2.contains( "Hazzard" ))
@@ -111,22 +112,16 @@ public class GameState
 				game.level.removeEntity( obj1 ); 
 			}
 			
-			if( obj1.contains( "door" ) || obj2.contains( "door" ) )
+			/*if( obj1.contains( "ground" ) && normal.y == -1 )
 			{
-				game.isLoadLevel = true;
+				Vector2 curSpeed = player.coll.getSpeed();
+				player.coll.setSpeed(new Vector2(curSpeed.x, 0));
 			}
-			
-			if( obj1.contains( "ground" ) || obj2.contains( "ground" ))
+			else if( obj2.contains( "ground" ) && normal.y == 1 )
 			{
-				if (normal.x == 0){
-					Vector2 curSpeed = player.coll.getSpeed();
-					player.coll.setSpeed(new Vector2(curSpeed.x, 0));
-				}
-//				if (normal.y == 0){
-//					Vector2 curSpeed = game.level.player.coll.getSpeed();
-//					game.level.player.coll.setSpeed(new Vector2(0, curSpeed.y));
-//				}
-			}
+				Vector2 curSpeed = player.coll.getSpeed();
+				player.coll.setSpeed(new Vector2(curSpeed.x, 0));
+			}*/
 		}	
 				
 	}
