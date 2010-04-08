@@ -179,7 +179,6 @@ public class LevelFactory
     		{
     			level.addEntity( factory.buildEmitter( name, type[1], pos ));
     		}
- 
     	}
 	}
 
