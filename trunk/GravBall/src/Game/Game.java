@@ -110,12 +110,14 @@ public class Game
 			levelFactory = new LevelFactory( database, physics, midiPlayer, entityFactory);
 			
 			//Create player
-			try {
-				this.player = entityFactory.buildPlayer("ball");
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				this.player = entityFactory.buildPlayer("ball");
+//				player.coll.setDampening((float)0.00001);
+//				player.coll.setRestitution((float) 0.9);
+//			} catch (FileNotFoundException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 
 			//Set up the screen
 			screenWidth = Integer.parseInt(database.get("config.screen", "width"));
@@ -138,11 +140,9 @@ public class Game
 			
 			//Load sprites
 			redParticle = new Sprite();
-			//redParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/redparticle.png").getImage(), 1000000);
-			redParticle.addFrame(ImageIO.read( new File( "content/sprites/redparticle.png" )), 100000);
+			redParticle.addFrame(ImageIO.read( new File( "content/sprites/redparticle.png" )), 100);
 			greenParticle = new Sprite();
-			//greenParticle.addFrame((BufferedImage) new ImageIcon("content/sprites/greenparticle.png").getImage(), 0);
-			greenParticle.addFrame(ImageIO.read( new File( "content/sprites/greenparticle.png" )), 100000);
+			greenParticle.addFrame(ImageIO.read( new File( "content/sprites/greenparticle.png" )), 100);
 			
 			//Run the game
 			run();
@@ -176,7 +176,7 @@ public class Game
 				Particle p = new Particle("p"+pNum, level.getPlayer().coll.getPos(), 1);
 				//p.setSpeed(new Vector2((float)1, (float)0));
 				physics.add(p);
-				ParticleEntity pEnt = new ParticleEntity("p"+pNum, greenParticle, p, level.getPlayer().coll.getPos(), 1000);
+				ParticleEntity pEnt = new ParticleEntity("p"+pNum, greenParticle, p, level.getPlayer().coll.getPos(), 2000);
 				level.addEntity(pEnt);
 				pNum += (pNum+1)%2500;//Maximum particle id of 2500
 				
@@ -206,7 +206,7 @@ public class Game
 		physics.clear();
 		midiPlayer.stop();
 		
-		level = levelFactory.buildLevel( ID, this.player );
+		level = levelFactory.buildLevel( ID, null );
 		
 		curLevel = ID;
 		nextLevel = database.get( "levels." + ID + ".map", "nextLevel" );
