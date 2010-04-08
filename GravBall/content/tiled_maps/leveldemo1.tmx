@@ -2,7 +2,7 @@
 <!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
 <map version="1.0" orientation="orthogonal" width="50" height="80" tilewidth="100" tileheight="100">
  <tileset name="rock" firstgid="1" tilewidth="100" tileheight="100" spacing="1" margin="1">
-  <image source="rock.png"/>
+  <image source="../../../GravBall3/content/tiled_maps/rock.png"/>
   <tile id="0">
    <properties>
     <property name="isPhysical" value="true"/>
@@ -107,6 +107,6 @@
  <objectgroup name="objects" width="0" height="0">
   <object name="player" type="player:player" x="200" y="200" width="100" height="100"/>
   <object name="red2" type="object:sheild" x="920" y="212" width="100" height="100"/>
-  <object name="door" type="ghost:door" x="1452" y="356" width="200" height="200"/>
+  <object name="door" type="ghost:door" x="1546" y="446" width="10" height="10"/>
  </objectgroup>
 </map>
