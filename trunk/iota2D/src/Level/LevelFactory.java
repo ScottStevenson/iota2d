@@ -142,6 +142,12 @@ public class LevelFactory
     		{
     			level.addEntity( factory.buildEmitter( name, type[1], pos ));
     		}
+    		
+    		//Player
+    		else if( type[0].equals( "player" ))
+    		{  
+    			player.coll.setPos(new Vector2((int)pos.x, (int)pos.y));
+    		}
     	}
 	}
 

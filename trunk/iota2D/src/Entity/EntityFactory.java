@@ -189,7 +189,7 @@ public class EntityFactory
 	
 	public Entity buildParticle( String name, String type, Vector2 pos )
 	{
-		float life = Float.parseFloat( database.get( "entities.particles." + type, "life" ));		
+		long life = Long.parseLong( database.get( "entities.particles." + type, "life" ));		
 		Particle part = new Particle( name, pos, 1 );		
 		physics.add( part );
 		
@@ -209,7 +209,7 @@ public class EntityFactory
 	{
 		Particle part = new Particle( name, pos, 1 );		
 		
-		float life = Float.parseFloat( database.get( "entities.particleEmitters." + type, "life" ));
+		long life = Long.parseLong( database.get( "entities.particleEmitters." + type, "life" ));
 		float randomAmount = Float.parseFloat( database.get( "entities.particleEmitters." + type, "randomAmount" ));
 	    float vX = Float.parseFloat( database.get( "entities.particleEmitters." + type, "vX" ));
 	    float vY = Float.parseFloat( database.get( "entities.particleEmitters." + type, "vY" ));

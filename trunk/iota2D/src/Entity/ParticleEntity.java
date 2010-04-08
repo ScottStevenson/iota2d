@@ -11,7 +11,7 @@ import Util.Vector2;
 
 public class ParticleEntity extends Entity
 {
-	private float life;
+	private long life;
 	private long timeCreated;
 	private Sprite sprite;
 	private Vector2 pos;
