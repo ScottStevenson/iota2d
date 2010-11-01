@@ -35,22 +35,22 @@ public class GameState
 	{
 		if( gravUp )
 		{
-			game.physics.setGravity(new Vector2(0, (float)-.003));
+			game.physics.setGravity(new Vector2(0, (float)-.00325));
 		}
 		
 		else if( gravDown )
 		{
-			game.physics.setGravity(new Vector2(0, (float).003));
+			game.physics.setGravity(new Vector2(0, (float).00325));
 		}
 		
 		else if( gravLeft )
 		{
-			game.physics.setGravity(new Vector2((float)-.003, 0));
+			game.physics.setGravity(new Vector2((float)-.00325, 0));
 		}
 		
 		else if( gravRight )
 		{
-			game.physics.setGravity(new Vector2((float).003, 0));
+			game.physics.setGravity(new Vector2((float).00325, 0));
 		}
 		
 		if( death )
